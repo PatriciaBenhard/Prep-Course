@@ -184,17 +184,16 @@ function numeroRandom() {
 }
 
 function esPositivo(numero) {
-  if (numero = 1);
-  
-  return "Es positivo";
-else if esNegativo(numero)  
-  if (numero = -1);
-  
-    return "Es negativo";
-  
-   if (numero = 0); 
-  
+  if (numero == 0) {
     return false;
+  }
+  else if (numero > 0) {
+    return "Es positivo";
+  }
+  else {
+    return "Es negativo";
+  }
+  
   
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
@@ -204,12 +203,15 @@ else if esNegativo(numero)
 }
 
 function agregarSimboloExclamacion(str) {
+  return str + "!";
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
 }
 
 function combinarNombres(nombre, apellido) {
+  var combinado = nombre + " " + apellido;
+  return combinado;
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
@@ -217,6 +219,7 @@ function combinarNombres(nombre, apellido) {
 }
 
 function obtenerSaludo(nombre) {
+  return "hola" + nombre + "!";
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
@@ -224,6 +227,7 @@ function obtenerSaludo(nombre) {
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
+  return alto * ancho;
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
   
@@ -231,6 +235,7 @@ function obtenerAreaRectangulo(alto, ancho) {
 
 
 function retornarPerimetro(lado){
+  return lado * 4;
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
   
@@ -238,6 +243,7 @@ function retornarPerimetro(lado){
 
 
 function areaDelTriangulo(base, altura){
+  return (base * altura)/2;
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
 
@@ -245,6 +251,7 @@ function areaDelTriangulo(base, altura){
 
 
 function deEuroAdolar(euro){
+  return euro * 1.2;
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
@@ -253,6 +260,13 @@ function deEuroAdolar(euro){
 
 
 function esVocal(letra){
+  if(letra.length > 1){
+    return "Dato incorrecto"
+  }
+  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+    return "Es vocal"
+  }
+  return "Dato incorrecto";
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
   //Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
